@@ -1,0 +1,15 @@
+#!/bin/python
+import sys,os
+
+link=int(input('Enter number of elements :'))
+#print link
+i=1
+sum=0
+while i <= link :
+	num=int(input( 'Enter ' + str(i) + ' num : ' ))
+ 	#num=input()
+	sum=sum + num
+	i+=1
+ 	#print 'true'
+
+print 'Total is ' + str(sum)

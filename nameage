@@ -1,0 +1,21 @@
+#!/bin/python
+
+name = raw_input("Enter a USER Name : ")
+print "hi ! " + str(name) + " nice to meet you "
+print "The length of the name is : "
+print(len(name))
+print "Details Extracted from DB"
+#print "Enter ur Age : "
+#age=input()
+#print 'You Entered ur age : ' + str(age)
+loop = 1
+while 1 :
+        try :
+                age = input("Enter ur Age : ")
+                print "YOU will be " + str(int(age) + 1) + " in a year "
+                break
+        except NameError:
+                print "You have Entered string Please Enter number"
+
+
+

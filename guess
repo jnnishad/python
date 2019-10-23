@@ -1,0 +1,24 @@
+#!/bin/python
+
+
+
+import sys
+import random
+import os
+print 'Guess Number between 1 - 10'
+print 'You have 5 attempts !!'
+guess=random.randint(0,10)
+j=5
+i=0
+while i < j :
+	num = input('Enter your Guess : ') 
+	if num < guess:
+		print 'YOUR GUESS IS LOWER'
+		i+=1
+	elif num > guess:
+		print 'YOUR GUESS IS HIGHER'
+		i+=1
+	elif num == guess :
+		print 'YOU ARE RIGHT ! YOU WON'
+		break
+	

@@ -1,0 +1,105 @@
+2019-01-16 19:52:15,713 INFO [stdout] (default task-30) bf - {"login":"AGODA","pass":"juhZ7QazaY@","amt":"45165","txncurr":"CNY","txnid":"364470371","od":"AGODA.COM","date":"2019-01-16 21:22:57","carddata":"Td/V2PyM5Mucsy3r0pKCX/yBi7GcIgwZ4a9BaCAdcY8=|YUHONG|CC|CUP","signature":"63c3d9404af3cdea5e4a1fad2cbbe998cc4c6cd2902ca8d599c7fea13463932aa4171b742d7361c8af71503d1b0c9c64fb73aff78677b901b1bf1dfbadfd1e50","udf1":"20266563097-1-364470371"} 2019-01-16 19:52:15,714 INFO [stdout] (default task-30) 364470371 login --- AGODA
+<x:NetworkRequest xmlns:x="http://www.payeco.com" xmlns:xsi="http://www.w3.org">
+    <OrderType>00</OrderType>
+    <AccountType>02</AccountType>
+    <Password>gguu2iSSCV700GYqvzuwDJohDAjely0h9Ush2Qtq2CHr2Mo4wpkY36LkqjZN+xdebUw4oOF3lp3Q
+ZZ23CDMvR+FQxsOdsk159VsmXNryivncP0hroNe6MT8PvsvT3bqZBvcRo6jsHoLNUmaZxxehTLT6
+fApbsbsnma4Dae7Z2L4=</Password>
+    <Currency>CNY</Currency>
+    <OrderFrom>02</OrderFrom>
+    <Description>AGODA.COM</Description>
+    <Amount>451.65</Amount>
+    <MAC>8F177CAA2D5BB0CC140B37D46D9B0CA2</MAC>
+    <TransDatetime>20190116222215</TransDatetime>
+    <TransData>10936296</TransData>
+    <Version>2.1.0</Version>
+    <MerchantNo>502050002725</MerchantNo>
+    <TerminalNo>02028828</TerminalNo>
+    <ProcCode>0200</ProcCode>
+    <AccountNo>6222523737632992</AccountNo>
+    <ProcessCode>190000</ProcessCode>
+    <AcqSsn>195215</AcqSsn>
+    <MerchantOrderNo>364470371</MerchantOrderNo>
+</x:NetworkRequest>
+2019-01-16 19:52:16,684 INFO  [stdout] (Thread-13782) <x:NetworkRequest xmlns:x="http://www.payeco.com" xmlns:xsi="http://www.w3.org">
+2019-01-16 19:52:16,684 INFO  [stdout] (Thread-13782)     <MerchantName>Agoda</MerchantName>
+2019-01-16 19:52:16,684 INFO  [stdout] (Thread-13782)     <OrderType>00</OrderType>
+2019-01-16 19:52:16,684 INFO  [stdout] (Thread-13782)     <AccountType>02</AccountType>
+2019-01-16 19:52:16,684 INFO  [stdout] (Thread-13782)     <Password>gguu2iSSCV700GYqvzuwDJohDAjely0h9Ush2Qtq2CHr2Mo4wpkY36LkqjZN+xdebUw4oOF3lp3Q
+2019-01-16 19:52:16,684 INFO  [stdout] (Thread-13782) ZZ23CDMvR+FQxsOdsk159VsmXNryivncP0hroNe6MT8PvsvT3bqZBvcRo6jsHoLNUmaZxxehTLT6
+2019-01-16 19:52:16,684 INFO  [stdout] (Thread-13782) fApbsbsnma4Dae7Z2L4=</Password>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <Currency>CNY</Currency>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <OrderFrom>02</OrderFrom>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <Description>AGODA.COM</Description>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <Amount>451.65</Amount>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <MAC>76A57B33E4B1EBC2453826B2CCE211C6</MAC>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <OrderState>05</OrderState>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <RespCode>T467</RespCode>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <TransDatetime>20190116222215</TransDatetime>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <TransData>10936296</TransData>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <OrderNo>502019011612931080</OrderNo>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <Version>2.1.0</Version>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <MerchantNo>502050002725</MerchantNo>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <TerminalNo>02028828</TerminalNo>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <ProcCode>0210</ProcCode>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <AccountNo>2992</AccountNo>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <ProcessCode>190000</ProcessCode>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <AcqSsn>195215</AcqSsn>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <MerchantOrderNo>0371</MerchantOrderNo>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <Remark>支付失败，原因，暂不支持的新用户</Remark>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782) </x:NetworkRequest>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782) <x:NetworkRequest xmlns:x="http://www.payeco.com" xmlns:xsi="http://www.w3.org">
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <MerchantName>Agoda</MerchantName>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <OrderType>00</OrderType>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <AccountType>02</AccountType>
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782)     <Password>gguu2iSSCV700GYqvzuwDJohDAjely0h9Ush2Qtq2CHr2Mo4wpkY36LkqjZN+xdebUw4oOF3lp3Q
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782) ZZ23CDMvR+FQxsOdsk159VsmXNryivncP0hroNe6MT8PvsvT3bqZBvcRo6jsHoLNUmaZxxehTLT6
+2019-01-16 19:52:16,685 INFO  [stdout] (Thread-13782) fApbsbsnma4Dae7Z2L4=</Password>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <Currency>CNY</Currency>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <OrderFrom>02</OrderFrom>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <Description>AGODA.COM</Description>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <Amount>451.65</Amount>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <MAC>76A57B33E4B1EBC2453826B2CCE211C6</MAC>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <OrderState>05</OrderState>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <RespCode>T467</RespCode>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <TransDatetime>20190116222215</TransDatetime>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <TransData>10936296</TransData>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <OrderNo>502019011612931080</OrderNo>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <Version>2.1.0</Version>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <MerchantNo>502050002725</MerchantNo>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <TerminalNo>02028828</TerminalNo>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <ProcCode>0210</ProcCode>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <AccountNo>2992</AccountNo>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <ProcessCode>190000</ProcessCode>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <AcqSsn>195215</AcqSsn>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <MerchantOrderNo>0371</MerchantOrderNo>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782)     <Remark>支付失败，原因，暂不支持的新用户</Remark>
+2019-01-16 19:52:16,686 INFO  [stdout] (Thread-13782) </x:NetworkRequest>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30) <x:NetworkRequest xmlns:x="http://www.payeco.com" xmlns:xsi="http://www.w3.org">
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <MerchantName>Agoda</MerchantName>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <OrderType>00</OrderType>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <AccountType>02</AccountType>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <Password>gguu2iSSCV700GYqvzuwDJohDAjely0h9Ush2Qtq2CHr2Mo4wpkY36LkqjZN+xdebUw4oOF3lp3Q
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30) ZZ23CDMvR+FQxsOdsk159VsmXNryivncP0hroNe6MT8PvsvT3bqZBvcRo6jsHoLNUmaZxxehTLT6
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30) fApbsbsnma4Dae7Z2L4=</Password>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <Currency>CNY</Currency>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <OrderFrom>02</OrderFrom>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <Description>AGODA.COM</Description>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <Amount>451.65</Amount>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <MAC>76A57B33E4B1EBC2453826B2CCE211C6</MAC>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <OrderState>05</OrderState>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <RespCode>T467</RespCode>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <TransDatetime>20190116222215</TransDatetime>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <TransData>10936296</TransData>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <OrderNo>502019011612931080</OrderNo>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <Version>2.1.0</Version>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <MerchantNo>502050002725</MerchantNo>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <TerminalNo>02028828</TerminalNo>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <ProcCode>0210</ProcCode>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <AccountNo>2992</AccountNo>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <ProcessCode>190000</ProcessCode>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <AcqSsn>195215</AcqSsn>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <MerchantOrderNo>0371</MerchantOrderNo>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30)     <Remark>支付失败，原因，暂不支持的新用户</Remark>
+2019-01-16 19:52:16,770 INFO  [stdout] (default task-30) </x:NetworkRequest> for - 364470371
+2019-01-16 19:52:16,814 INFO  [stdout] (default task-30) {"amt":"45165","nttrefid":"10936296","txnid":"364470371","respcode":"01","respdesc":"Failed","proc_code":"T467","accounttype":"02","date":"2019-01-16 22:22:15","mobile":"","txncurr":"CNY","signature":"63c3d9404af3cdea5e4a1fad2cbbe998cc4c6cd2902ca8d599c7fea13463932aa4171b742d7361c8af71503d1b0c9c64fb73aff78677b901b1bf1dfbadfd1e50"}

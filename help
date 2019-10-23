@@ -1,0 +1,9 @@
+#!/bin/python
+import sys 
+import subprocess
+import os
+#subprocess.popen(['python2.6'], shell=True)
+arg = str(sys.argv[1])
+#print ('import arg')
+
+help(arg)

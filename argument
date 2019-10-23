@@ -1,0 +1,21 @@
+#!/bin/python
+
+USER = sys.argv[1]
+TXN = sys.argv[2]
+
+if str(USER) == 'jai':
+        print 'Hello ' + USER + ' system is ready to use'
+else:
+        print 'You are not jai'
+
+
+print 'Enter some Txn : '
+name = input('Enter some TXN :')
+print 'Generating Query !' + 'WAIT for a while' +  '!'*5 + str(name)
+type(name)
+
+execute = subprocess.call(["date"])
+listing = subprocess.call(["ls" , "-larth"])
+print execute
+
+

@@ -1,0 +1,18 @@
+#!/bin/python
+#print(sys.argv[0])
+import sys
+if len(sys.argv) <= 1  :
+        print 'Provide Proper Arguments'
+        print 'i.e.,  <script> <DBname>'
+        sys.exit()
+else :
+        print 'proper argument'
+
+check = sys.argv[1]
+#print str(check)
+#print(len(sys.argv))
+if str(check) == 'jai' :
+        print 'argument passed successfully'
+else :
+        print 'task failed'
+

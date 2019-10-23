@@ -1,0 +1,36 @@
+#!/bin/python
+
+
+import re 
+import sys
+import subprocess
+import os
+arg1 = sys.argv[1]
+f = sys.argv[2]
+
+for line in open(f,'r'):
+	if re.search(arg1 , line):
+		print  str(line) 
+	if line == None :
+		print  'no matches found'
+
+
+#check = subprocess.check_call(["ls","-larth"])
+#
+#if check != 0 :
+#	print 'trapped'
+#else :
+#	print 'done successful'
+#call=subprocess.check_call("exit", shell=True)
+#print call
+#arg = sys.argv[1]
+# 
+#
+#f = open(arg,'r') 
+#print (f.read() )
+#f.close()
+#
+#recurse()
+#
+#for i in range(1,int(arg),0):
+#	print i,

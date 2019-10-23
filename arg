@@ -1,0 +1,48 @@
+#!/bin/python
+import os
+import sys
+import json
+import subprocess
+import mysql.connector
+
+#process = [ 'Search transaction','Processor','Memory','Space','Process','Time','exit' ]
+process = ['File Appender','Database','mm_txn','exit']
+for i in range(len(process)):
+        #print str(i) + "..." + str(PROCESS(str((i)))
+        print  '\t\t\t\t\t\t\t' + str(i)+ ')' +  process[i]
+ #-------------------------------------------------------#
+
+def Initializing():
+		CNX = mysql.connector.connect(user='paynetz',password='paynetz#123',host='192.168.151.87',database='jai')
+		cursor = CNX.cursor()
+		query = ("select * from student")
+		cursor.execute(query)
+		print cursor
+		for i in cursor:
+        		print  str(i)
+		cursor.close()
+		CNX.close()
+
+def mm_txn():
+		CNX = mysql.connector.connect(user='paynetz',password='paynetz#123',host='192.168.151.87',database='jai')
+		cursor = CNX.cursor()
+		query = ("select * from mm_txn")
+		cursor.execute(query)
+		print str(cursor)
+		for i in cursor:
+        		print  str(i)
+		cursor.close()
+		CNX.close()
+
+	
+def switch(num):
+	switcher = {
+		0: 'Processing File', 
+		1: Initializing,
+		2: mm_txn,
+		3: "Exit"
+	}
+	return switcher.get(num,"Invalid month")()
+num=int(input('Enter ur choice :' ))
+print num
+print(switch(num))
