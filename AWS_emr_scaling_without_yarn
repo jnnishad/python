@@ -1,0 +1,81 @@
+#!/usr/bin/python3.6
+import subprocess
+import boto3
+import json
+
+
+## AWS secret ID , KEY along with ClusterId to scale and Instance-group to Ignore ##
+region = 'ap-south-1'
+ACCESS_ID = '#################'
+ACCESS_KEY = '#####################################'
+Cluster_id = '############'
+Ignore_grp='ig-############'
+
+## Presto Runtime query check on master-node 33 
+LIST = subprocess.getoutput('presto-cli --catalog system --execute \"Select * from runtime.queries where state=\'RUNNING\';\"|wc -l')
+print ("CURRENT RUNNING QUERY",LIST)
+
+## Fetching Required data to Perform scale down ##
+if int(LIST) <= 1:
+    print ('\033[92m','PERFORMING SCALE DOWN','\033[0m')
+    dict={}
+    emr = boto3.client(
+    'emr',
+    aws_access_key_id = ACCESS_ID,
+    aws_secret_access_key = ACCESS_KEY,
+    region_name = region
+    )
+    response = emr.list_instance_groups(
+    ClusterId = Cluster_id,
+    )
+    organize = (json.dumps(response , indent=4, sort_keys=True, default=str))
+## Organizing Instance-Group ids and count ##
+    DATA = json.loads(organize)
+    GrpIds = []
+    dict={}
+    for getter in DATA['InstanceGroups']:
+        Taskers = getter['InstanceGroupType']
+        if Taskers == 'TASK' :
+            GrpIds.append(getter['Id'])
+            dict[getter['Id']]=getter['RunningInstanceCount']
+    print (GrpIds ,'Total Group IDS Fectched')
+    print ('Removing','\033[1m',Ignore_grp,'\033[0m','from grp in list for constant scaling')
+## Ignoring Group Id for constant Node ##    
+    if Ignore_grp in dict:
+        del dict[Ignore_grp]
+    print ('Instances With count are :',dict)
+    HOSTS=[]
+    GrpIds.remove(Ignore_grp)
+    print ('Instances-Group used for scaling',GrpIds)
+##Performing scale down if instance count is more than 0 ##    
+    for i,j in dict.items():
+        if int(j) > 0:
+            listing = emr.list_instances(
+                ClusterId=Cluster_id,
+                InstanceGroupId=i,
+                InstanceStates=[
+                    'RUNNING'
+                                ],
+            )
+            align = (json.dumps(listing, indent=4, default=str))
+            DATA2 = json.loads(align)
+            for list_ip in DATA2['Instances']:
+                print(list_ip['PrivateIpAddress'], 'Inside Private IP')
+                HOSTS.append(list_ip['PrivateIpAddress'])
+            print (HOSTS,'DATA total listed from',i)
+            MODIFY = emr.modify_instance_groups(
+                ClusterId=Cluster_id,
+                InstanceGroups=[
+                    {
+            'InstanceGroupId': i,
+            'InstanceCount': 0,
+                    }
+                                ]
+                                                )
+            break
+        else:
+            print ('Cannot scale group-id',i,'Already 0')
+else:
+    print ('More than 1 query is running hence waiting for Scale Up ')
+
+                                                                                                     
